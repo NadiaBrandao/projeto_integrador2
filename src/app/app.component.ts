@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import axios from 'axios';
-import { API_URL } from '../config';
+import { environment } from 'environments/environment';
 
 
 @Component({
@@ -16,7 +16,7 @@ export class AppComponent {
 }
 
 const api = axios.create({
-  baseURL: API_URL
+  baseURL: environment.api_url
 })
 
 function app(){
